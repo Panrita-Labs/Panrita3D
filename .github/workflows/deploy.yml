@@ -20,6 +20,7 @@ jobs:
           key: ${{ secrets.SSH_KEY }}
           script: |
             cd /var/www/Panrita3D  # Change this to your actual web folder path
-            git pull origin main
+            git fetch origin main
+            git reset --hard origin/main
             # Optional: Restart Nginx if needed (not usually required for static HTML)
             # sudo systemctl restart nginx
